@@ -22,19 +22,19 @@
             </div>
             <div class="input-group">
                 <label>Phone No.</label>
-                <input type="text" placeholder="Enter Your Phone Number">
+                <input type="tet" placeholder="123 4567 890" id="contact-phone" onkeyup="validatePhone()">
                 <span id="phone-error"></span>
 
             </div>
             <div class="input-group">
                 <label>Email ID</label>
-                <input type="text" placeholder="Enter Your Email ID">
+                <input type="text" placeholder="Enter Your Email ID"  id="contact-email" onkeyup="validateEmail()">
                 <span id="email-error"></span>
 
             </div>
             <div class="input-group">
                 <label>Your Message</label>
-                <textarea rows="5" placeholder="Enter your massege "></textarea>
+                <textarea rows="5" placeholder="Enter your massege " id="contact-message" onkeyup="validateMessage()" ></textarea>
 
                 <span id="message-error"></span>
 
