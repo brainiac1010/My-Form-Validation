@@ -29,7 +29,7 @@ function validatePhone() {
         return false;
     }
     if (phone.length < 11) {
-        phoneError.innerHTML = 'Phone No should be at least 11 digits';
+        phoneError.innerHTML = 'Phone No least 11 digits';
         return false;
     }
     phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
@@ -49,12 +49,32 @@ function validateEmail() {
         return false;
     }
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-
+    return true;
 }
 
 
 
 
-function validateMessage(){
-    
+function validateMessage() {
+    var message = document.getElementById('contact-message').value;
+    var required = 30;
+    var left = required - message.length;
+
+    if (left > 0) {
+        messageError.innerHTML = left + 'more carecter required';
+        return false;
+    }
+
+    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+
+}
+function validateForm() {
+
+    if (!validateName() || !validatePhone() || !validateEmail || !validateMessage) {
+        submitError.style.display = 'block'
+        submitError.innerHTML = 'Please Fix the error to submit';
+        setTimeout(function () { submitError.style.display = 'none'; }, 3000);
+        return false;
+    }
 }
