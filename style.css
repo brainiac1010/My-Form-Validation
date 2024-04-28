@@ -14,9 +14,7 @@
     justify-content: center;
 }
 
-
 .container form {
-
     width: 90%;
     max-width: 500px;
     padding: 50px 30px 20px;
@@ -36,7 +34,6 @@
     padding: 20px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
 }
 
 .input-group {
@@ -67,7 +64,6 @@
     font-size: 14px;
 }
 
-
 /* Button Styles */
 form button {
     background: #061147;
@@ -84,7 +80,6 @@ form button {
     justify-content: center;
     align-items: center;
 }
-
 
 form button:hover {
     background: #114077;
@@ -107,14 +102,12 @@ form button:hover {
     }
 }
 
-
 .input-group span {
     position: absolute;
     bottom: 12px;
     right: 17px;
     font-size: 14px;
     color: #ff0000;
-
 }
 
 #submit-error {
@@ -123,4 +116,20 @@ form button:hover {
 
 .input-group span i {
     color: seagreen;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container form {
+        padding: 30px;
+    }
+
+    .input-group label {
+        flex-basis: 35%;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        flex-basis: 65%;
+    }
 }
