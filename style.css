@@ -120,3 +120,7 @@ form button:hover {
 #submit-error {
     color: #ff0000;
 }
+
+.input-group span i {
+    color: seagreen;
+}
